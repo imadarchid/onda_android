@@ -24,7 +24,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     console.log('didReceiveRemoteNotificationCallBack: ' + JSON.stringify(jsonData));
   };
 
-  window.plugins.OneSignal.init("53d87d50-7bed-49a7-be30-ee6c3d4c964a",
+  window.plugins.OneSignal.init("SECRET",
                                  {googleProjectNumber: "536333626971"},
                                  notificationOpenedCallback);
   
