@@ -1,0 +1,10 @@
+<ion-view view-title="Arrivées">
+  <ion-content>
+  	<ul class="list">
+    	<li class="item" ng-repeat="x in villes" ui-sref="app.arrivalsb({ cityName: x.id, name: x.name, WeatherName: x.WN })">
+      		{{x.name}}
+    	</li>
+</ul>
+    
+  </ion-content>
+</ion-view>

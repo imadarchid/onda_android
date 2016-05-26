@@ -1,0 +1,48 @@
+<ion-view view-title="Départs">
+  <ion-content>
+
+  <div class="title1">
+    <h3>Départs d'aujourd'hui dans tout le Maroc</h3>
+    <p>Informations en temps réel - ONDA.ma</p>
+    <p>{{num[0]}} vols pour le {{date | date:'dd-MM-yyyy'}}</p>
+  </div>  
+
+  <div ng-repeat="value in data">
+  <div class="cards" ng-repeat="x in value">
+  	<div class="card">
+        <div class="item item-divider">
+    		Numéro de vol : {{x.num_vol}}
+  		</div>
+
+  	<div class="item item-text-wrap">
+    	{{x.ville_aeroport}} - {{x.dest_prov}}
+  	</div>
+  	<div class="list card">
+
+  <a href="#" class="item item-icon-left">
+    <i class="icon ion-plane"></i>
+    Compagnie : {{x.code_compagnie}}
+  </a>		
+
+  <a href="#" class="item item-icon-left">
+    <i class="icon ion-plane"></i>
+    Départ Prévu : {{x.heure_vol}}:{{x.min_vol}}
+  </a>
+
+  <a href="#" class="item item-icon-left">
+    <i class="icon ion-ios-telephone"></i>
+    Status : {{x.Observation}}
+  </a>
+
+
+</div>
+		<button class="button button-block button-positive">
+  Plus d'Informations
+</button>
+
+</div>
+</div>  
+</div>
+
+  </ion-content>
+</ion-view>
